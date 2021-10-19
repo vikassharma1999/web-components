@@ -1,0 +1,112 @@
+$Blue:#00b9f5;
+$sidebarLabel:#536e92;
+$defaultbtnborder:#ebeff5;
+$line:#e6ebf3;
+$error:#ff4b55;
+$sectionBG:#f6f8fc;
+$dark3:#7b93b4;
+
+.web-button{
+	font-weight:600;
+	font-size:1.4rem;
+	padding:0.6rem 1.6rem;
+	min-height:4rem;
+	border-radius:0.2rem;
+	line-height:1;
+	cursor:pointer;
+	display:inline-flex;
+	align-items:center;
+	justify-content:center;
+	outline:none;
+
+	&__size__small{
+		font-size:1.4rem;
+		padding:0.6rem 1.2rem;
+		min-width:10.5rem;
+		min-height:3.2rem;
+	}
+	&__size__medium{
+		font-size:1.4rem;
+		padding:0.6rem 1.2rem;
+		min-width:10.5rem;
+		min-height:4rem;
+	}
+	&__size__large{
+		font-size:1.6rem;
+		padding:1.8rem 1.2rem;
+		min-width:14.7rem;
+		min-height:5.6rem;
+	}
+
+	&__primary{
+		background-color:#00b9f5;
+		color:white;
+		border:0.1rem solid #00b9f5;
+		&:hover,
+		&:focus{
+			background-color:#00b9f5;
+			border-color:#00b9f5;
+		}
+		&:disabled{
+			color:white;
+			background-color:#86a0c2;
+			&:hover{
+				color:white;
+			}
+		}
+	}
+	&__default {
+	    background-color: white;
+	    color: $sidebarLabel;
+	    border: 1px solid $defaultbtnborder;
+	    transition: all 0.3s ease;
+	    &:hover,
+	    &:active {
+	      border-color: $Blue;
+	      color: $Blue;
+	    }
+  }
+
+  &__primary-outline {
+    background-color: white;
+    color: $Blue;
+    border: 1px solid $Blue;
+    transition: all 0.3s ease;
+    &:hover,
+    &:focus {
+      border-color: $Blue;
+      color: $Blue;
+    }
+  }
+
+  &__danger {
+    background-color: white;
+    color: $error;
+    border: 1px solid $line;
+    transition: all 0.3s ease;
+    &:hover,
+    &:focus {
+      background-color: white;
+      border-color: $error;
+      color: $error;
+    }
+  }
+
+  &__link {
+    border-color: transparent;
+    color: $Blue;
+    min-width: fit-content;
+    &:focus {
+      outline: none;
+    }
+  }
+
+}
+
+button[disabled],
+button[disabled]:hover {
+  opacity: 0.6;
+  cursor: not-allowed;
+  color: rgba($dark3, 0.5);
+  border: 1px solid $sectionBG;
+}
